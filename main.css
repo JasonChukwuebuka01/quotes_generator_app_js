@@ -1,0 +1,81 @@
+*{
+ margin:0;
+ padding:0;
+}
+
+body {
+font-family:courier;
+/* Add these below four lines of codes to ensure the quote box doesnt overflow the page */
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+
+.container{
+ /* border: 1px solid red; */
+ /* Used above to understand the limit of the container flexbox */
+ width:95%;
+ height:90vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+}
+
+
+.quote_box{
+ width:100%;
+ height:400px;
+ padding:0 10px;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ border:8px solid black;
+ background:#c5d4c9;
+ border-radius:70px 0px 70px 0px;
+ animation:move 2s infinite alternate;
+}
+
+
+@keyframes move{
+ 0%{transform:translateY(-10px)}
+ 20%{transform:translateY(10px)}
+ 40%{transform:translateY(-10px)}
+ 60%{transform:translateY(10px)}
+ 80%{transform:translateY(-10px)}
+ 100%{transform:translateY(10px)}
+}
+
+.quote_box h2,h3{
+ font-size:1.5rem;
+ font-weight:bold;
+ color:#000;   
+ text-align:center;
+ width:100%;
+}
+
+
+.button{
+ position:absolute;
+ left:50%;
+ transform:translateX(-55%);
+ top:calc(100% - 100px);
+}
+
+
+#btn{
+ background:#c5d4c9;
+ height:60px;
+ border:none;
+ color:#000;
+ font-size: 18px;
+ font-weight:bold;
+ font-family:times new roman;
+ /* Added the below lines of codes to improve the contrast of the button */
+ padding: 6px 20px;
+ border: 5px solid #242424;
+ border-radius: 8px;
+}
